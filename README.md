@@ -16,7 +16,10 @@ A collection of programming projects covering core computer science concepts —
 #### [finance](./finance)
 A stock portfolio web app built with Flask. Supports user registration, simulated stock trading with real price data, and portfolio tracking. Covers authentication, database management, and financial logic.
 
-![Alt finacen_login](./readme_assets/finance_login.png) ![Alt finacen_index](./readme_assets/finance_index.png)
+
+| Login | Index |
+| :---: | :---: |
+| ![Alt finacen_login](./readme_assets/finance_login.png) | ![Alt finacen_index](./readme_assets/finance_index.png) |
 
 #### [trivia](./trivia)
 A trivia quiz web app with a Flask backend, dynamic front end, and score tracking.
