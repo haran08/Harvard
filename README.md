@@ -23,12 +23,16 @@ A stock portfolio web app built with Flask. Supports user registration, simulate
 
 
 #### [trivia](./trivia)
-A trivia quiz web app with a Flask backend, dynamic front end, and score tracking.
+A trivia quiz web app with dynamic front end, and score tracking.
 
 
 <table>
-    <td><img src="./readme_assets/trivia1.png" width="400"></td>
-    <td><img src="./readme_assets/trivia2.png" width="400"></td>
+    <a href="https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/trivia1.png">
+        <td><img src="./readme_assets/trivia1.png" width="400"></td>
+    </a>
+    <a href="https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/trivia2.png">
+        <td><img src="./readme_assets/trivia2.png" width="400"></td>
+    </a>
 </table>
 
 
