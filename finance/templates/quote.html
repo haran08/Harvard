@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    quote
+{% endblock %}
+
+{% block main %}
+
+    {% if no_stock %}
+
+        <div>
+            <h2 style="padding-bottom: 2rem;">Invalid stock symbol
+                <img src="static/invalid_stock.png" style="width: 32px; height: 32px;"></h2>
+
+        </div>
+
+    {% endif %}
+
+    <form action="/quote" method="POST">
+        <div class="mb-3">
+            <input autofocus class="form-control mx-auto w-auto" name="symbol"
+                placeholder="stock symbol" type="text" required>
+        </div>
+        <button class="button" type="submit">Search</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,131 @@
+
+year == 2024 AND month == 7 AND day == 28
+
+-- crime_scene description
+| id  |
+| 295 | Humphrey Street | Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery. Interviews were conducted today with three witnesses who were present at the time – each of their interview transcripts mentions the bakery.|
+
+| 297 | Humphrey Street | Littering took place at 16:36. No known witnesses.|
+
+-- Interview transcript
+
+| Ruth    | Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away. If you have security footage from the bakery parking lot, you might want to look for cars that left the parking lot in that time frame.|
+
+| Eugene  | I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery, I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.|
+
+| Raymond | As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket. |
+
+-- barkery_security_logs activity
++---------------+
+| license_plate |
++---------------+
+| 5P2BI95       |
+| 94KL13X       |
+| 6P58WS2       |
+| 4328GD8       |
+| G412CB7       |
+| L93JTIZ       |
+| 322W7JE       |
+| 0NTHK55       |
+| 1106N58       |
++---------------+
+
+-- ATM transactions
++----------------+
+| account_number |
++----------------+
+| 28500762       |
+| 28296815       |
+| 76054385       |
+| 49610011       |
+| 16153065       |
+| 25506511       |
+| 81061156       |
+| 26013199       |
++----------------+
+
+-- Phone-call
++----------------+----------------+
+|     caller     |    receiver    |
++----------------+----------------+
+| (130) 555-0289 | (996) 555-8899 |
+| (499) 555-9472 | (892) 555-8872 |
+| (367) 555-5533 | (375) 555-8161 |
+| (499) 555-9472 | (717) 555-1342 |
+| (286) 555-6063 | (676) 555-6554 |
+| (770) 555-1861 | (725) 555-3243 |
+| (031) 555-6622 | (910) 555-3251 |
+| (826) 555-1652 | (066) 555-9701 |
+| (338) 555-6650 | (704) 555-2131 |
++----------------+----------------+
+
+-- Flights
++----+
+| id |
++----+
+| 23 |
+| 36 |
+| 43 |
++----+
+
+-- Passports
++-----------------+
+| passport_number |
++-----------------+
+| 4149859587      |
+| 9183348466      |
+| 7378796210      |
+| 7874488539      |
+| 4195341387      |
+| 6263461050      |
+| 3231999695      |
+| 7951366683      |
+| 7214083635      |
+| 1695452385      |
+| 5773159633      |
+| 1540955065      |
+| 8294398571      |
+| 1988161715      |
+| 9878712108      |
+| 8496433585      |
+| 7597790505      |
+| 6128131458      |
+| 6264773605      |
+| 3642612721      |
+| 4356447308      |
+| 7441135547      |
++-----------------+
+
+-- suspects
++--------+
+|   id   |
++--------+
+| 398010 |
+| 449774 |
+| 560886 |
+| 686048 |
++--------+
+
+-- suspects bank_account number
++----------------+
+| account_number |
++----------------+
+| 49610011       |
+| 76054385       |
++----------------+
+
+-- suspects
++--------+----------------+--------+
+|  name  |  phone_number  |   id   |
++--------+----------------+--------+
+| Taylor | (286) 555-6063 | 449774 |
+| Bruce  | (367) 555-5533 | 686048 |
++--------+----------------+--------+
+
+-- thief and accomplice
++--------+--------+----------------+
+|   id   |  name  |  phone_number  |
++--------+--------+----------------+
+| 250277 | James  | (676) 555-6554 | -- accomplice
+| 449774 | Taylor | (286) 555-6063 | -- thief
++--------+--------+----------------+

@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    quote
+{% endblock %}
+
+{% block main %}
+
+    <!-- Error messages -->
+
+    {% if invalid_stock %}
+
+    <div>
+        <h2 style="padding-bottom: 2rem;">Invalid stock symbol
+            <img src="static/invalid_stock.png" style="width: 32px; height: 32px;" alt=""></h2>
+    </div>
+
+    {% endif %}
+
+
+    {% if invalid_count %}
+
+    <div>
+        <h2 style="padding-bottom: 2rem;">Invalid total shares to sell
+            <img src="static/invalid_stock.png" style="width: 32px; height: 32px;" alt=""></h2>
+    </div>
+
+    {% endif %}
+
+    {% if invalid_user_stock %}
+
+    <div>
+        <h2 style="padding-bottom: 2rem;">User doesn't possess this stock
+            <img src="static/invalid_stock.png" style="width: 32px; height: 32px;" alt=""></h2>
+    </div>
+
+    {% endif %}
+
+    {% if not_enough_shares %}
+
+    <div>
+        <h2 style="padding-bottom: 2rem;">You doesn't possess that many shares
+            <img src="static/invalid_stock.png" style="width: 32px; height: 32px;" alt=""></h2>
+    </div>
+
+    {% endif %}
+
+
+    <!-- UI Display -->
+
+    <form action="/sell" method="POST">
+        <div class="mb-3">
+            <div>
+                <label class="label">Please choose a stock and a quantity to sell</label>
+            </div>
+            <select name="symbol">
+                <option disabled>-- Stock --</option>
+                {% for stock in stocks %}
+
+                <option>{{ stock.share_symbol }}</option>
+
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="shares"
+                placeholder="shares" type="number" min="1" required>
+        </div>
+        <button class="button" type="submit">Sell</button>
+    </form>
+
+{% endblock %}

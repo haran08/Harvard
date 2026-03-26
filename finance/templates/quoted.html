@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    quote
+{% endblock %}
+
+{% block main %}
+
+    <table id="stock-table" class="stock-table">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> {{symbol}} </td>
+            <td> {{price}} </td>
+        </tr>
+    </tbody>
+    </table>
+
+    <form action="/quote" method="POST">
+        <div class="mb-3">
+            <input autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="stock symbol" type="text">
+        </div>
+        <button class="button" type="submit">Search</button>
+    </form>
+
+{% endblock %}

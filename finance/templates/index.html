@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+
+    <table id="stock-table" class="stock-table">
+        <thead>
+            <tr>
+                <th style="text-align: left;">Symbol</th>
+                <th style="width: 15%;">Shares</th>
+                <th style="width: 15%;">Price</th>
+                <th style="width: 15%;">Total</th>
+                <th style="width: 25%;"></th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for stock in stocks %}
+
+            <tr>
+                <td style="text-align: left;"> {{stock.symbol}} </td>
+                <td>{{ stock.shares }}</td>
+                <td>{{ stock.price }}</td>
+                <td>{{ stock.total }}</td>
+                <td style="text-align: right;">
+                    <div style="display: flex; gap: 8px; align-items: center; justify-content: flex-end;">
+                        <form action="/buy" method="POST" style="display: flex; gap: 4px; align-items: center;">
+                            <input type="hidden" name="hidden_symbol" value="{{stock.symbol}}">
+                            <input style="width: 70px; padding: 4px; text-align: left;" name="count"
+                                placeholder="count" type="number" min="1" required>
+                            <button class="button"
+                                style="padding: 4px 8px; white-space: nowrap; text-align: left;"
+                                type="submit">Buy</button>
+                        </form>
+                        <form action="/sell" method="POST" style="display: flex; gap: 4px; align-items: center;">
+                            <input type="hidden" name="symbol" value="{{stock.symbol}}">
+                            <input style="width: 70px; padding: 4px; text-align: left;" name="count"
+                                placeholder="count" type="number" min="1" required>
+                            <button class="button"
+                                style="padding: 4px 8px; white-space: nowrap; text-align: left;"
+                                type="submit">Sell</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+
+        {% endfor %}
+
+            <tr>
+                <td colspan="2"></td>
+                <td style="font-weight: bold;">Cash</td>
+                <td>{{ cash }}</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td style="font-weight: bold; font-size: 1.2rem;">Total</td>
+                <td>{{ total }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+{% endblock %}

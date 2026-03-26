@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+    <form method="post">
+        <div  class="mb-3 d-flex justify-content-center">
+            <div class="input-group w-auto">
+                <span class="input-group-text" style="background: none; border: none"
+                >$</span>
+                <input autofocus class="form-control mx-auto w-auto"
+                    name="value" id="v" placeholder="0.00" type="text">
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Deposit</button>
+    </form>
+
+    <script>
+    document.getElementById("v").addEventListener("input", function() {
+        let value = this.value.replace(/[^0-9]/g, "");  // digits only
+        if (value == ""){
+            this.value = "";
+            return;
+        }
+
+        let formatted = (parseInt(value) / 100).toFixed(2);
+        this.value = formatted;
+    });
+    </script>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function() {
+                console.log("1");
+
+                let corrects = document.querySelectorAll(".correct");
+
+                for (let i = 0; i < corrects.length; i++) {
+                    corrects[i].addEventListener("click", function() {
+                        reset_buttons();
+                        corrects[i].style.backgroundColor = "Green";
+
+                        let f = document.querySelector("#Q1_feedback");
+                        f.innerHTML = "Correct!";
+                    });
+                }
+
+                let incorrects = document.querySelectorAll(".incorrect");
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener("click", function() {
+                        reset_buttons();
+                        incorrects[i].style.backgroundColor = "Red";
+
+                        let f = document.querySelector("#Q1_feedback");
+                        f.innerHTML = "Incorrect!";
+                    });
+                }
+
+
+                document.querySelector("#check").addEventListener("click", function() {
+                    input = document.querySelector("#Q2");
+
+                    if (input.value == "Jonnas" || input.value == "jonnas") {
+                        input.style.backgroundColor = "Green";
+                        document.querySelector("#Q2_feedback").innerHTML = "Correct!";
+                    }
+                    else {
+                        input.style.backgroundColor = "Red";
+                        document.querySelector("#Q2_feedback").innerHTML = "Incorrect!";
+                    }
+                });
+
+
+                function reset_buttons() {
+                    let buttons = document.querySelectorAll("button");
+
+                    for (let i = 0; i < buttons.length; i++) {
+                        buttons[i].style.backgroundColor = "";
+                    }
+                }
+            })
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>How much is 9 + 3 + 5</h3>
+                <button class="incorrect">12</button>
+                <button class="correct"  >17</button>
+                <button class="incorrect">19</button>
+                <h4 id="Q1_feedback"></h4>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is the name of Jonnas</h3>
+                <input autocomplete="off" id="Q2" type="text">
+                <button id="check">Check Answer</button>
+                <h4     id="Q2_feedback"></h4>
+            </div>
+        </div>
+    </body>
+</html>

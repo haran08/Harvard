@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    quote
+{% endblock %}
+
+{% block main %}
+
+    <!-- Error messages -->
+
+    {% if stock == "false" %}
+
+    <div>
+        <h2 style="padding-bottom: 2rem;">Invalid stock symbol
+            <img src="static/invalid_stock.png" style="width: 32px; height: 32px;" alt=""></h2>
+    </div>
+
+    {% endif %}
+
+
+    {% if count == "false" %}
+
+    <div>
+        <h2 style="padding-bottom: 2rem;">Invalid total shares to buy
+            <img src="static/invalid_stock.png" style="width: 32px; height: 32px;" alt=""></h2>
+    </div>
+
+    {% endif %}
+
+
+    {% if no_cash %}
+
+    <div>
+        <h2 style="padding-bottom: 2rem;">Not enough cash to buy that amount of shares
+            <img src="static/invalid_stock.png" style="width: 32px; height: 32px;" alt=""></h2>
+    </div>
+
+    {% endif %}
+
+
+    {% if invalid_input == "true" %}
+
+    <div>
+        <h2 style="padding-bottom: 2rem;">Invalid stock symbol or total shares to buy
+            <img src="static/invalid_stock.png" style="width: 32px; height: 32px;" alt=""></h2>
+    </div>
+
+    {% endif %}
+
+
+    <!-- UI Display -->
+
+    {% if symbol == "true" %}
+
+        <form action="/buy" method="POST">
+            <div class="mb-3">
+                <input autofocus class="form-control mx-auto w-auto" name="symbol"
+                    placeholder="stock symbol" type="text" required>
+                <input class="form-control mx-auto w-auto" name="shares" autocomplete="off"
+                    placeholder="count" type="number" min="1" required>
+            </div>
+            <button class="button" type="submit">Search</button>
+        </form>
+
+    {% endif %}
+
+    {% if buy %}
+
+        <table id="stock-table" class="stock-table">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> {{symbol}} </td>
+                    <td> {{price}} </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form action="/buy" method="POST">
+            <div class="mb-3">
+                <input autofocus class="form-control mx-auto w-auto" name="hidden_symbol"
+                    value="{{symbol}}" type="hidden">
+                <input class="form-control mx-auto w-auto" name="count"
+                    placeholder="shares" type="number" min="1" required>
+            </div>
+            <button class="button" type="submit">Buy</button>
+        </form>
+
+    {% endif %}
+
+{% endblock %}

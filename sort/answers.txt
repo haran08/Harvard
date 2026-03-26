@@ -1,0 +1,14 @@
+sort1 uses: bubble sort
+
+How do you know?: Because he is able to know when the data is alreadly sorted, but he
+still takes his time to sort unsorted data.
+
+sort2 uses: merge sort
+
+How do you know?: Because his fast to process datas in need to be sorted and sorted datas
+(behavior of a n log2n sort algoriphm).
+
+sort3 uses: selection sort
+
+How do you know?: Because independent of the data alreadly be sorted or not he still takes
+his time to process the data.

@@ -1,0 +1,12 @@
+{
+    "gitdoc.enabled": true,
+    "files.associations": {
+        "stdio.h": "c",
+        "compare": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "stdlib.h": "c",
+        "stdbool.h": "c",
+        "stdint.h": "c"
+    }
+}
