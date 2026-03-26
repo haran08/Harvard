@@ -26,18 +26,9 @@ A stock portfolio web app built with Flask. Supports user registration, simulate
 A trivia quiz web app with dynamic front end, and score tracking.
 
 
-<table>
-    <td>
-        <a href="https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/trivia1.png" target="_blank">
-            <img src="./readme_assets/trivia1.png" width="400">
-        </a>
-    </td>
-    <td>
-        <a href="https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/trivia2.png" target="_blank">
-            <img src="./readme_assets/trivia2.png" width="400">
-        </a>
-    </td>
-</table>
+| |  |
+| :---: | :---: |
+| ![Alt finacen_login](https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/trivia1.png) | ![Alt finacen_index](https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/trivia2.png) |
 
 
 #### [birthdays](./birthdays)
