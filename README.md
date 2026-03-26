@@ -19,7 +19,7 @@ A stock portfolio web app built with Flask. Supports user registration, simulate
 
 | Login | Index |
 | :---: | :---: |
-| ![Alt finacen_login](./readme_assets/finance_login.png) | ![Alt finacen_index](./readme_assets/finance_index.png) |
+| ![Alt finacen_login](https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/finance_login.png) | ![Alt finacen_index](https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/finance_index.png) |
 
 
 #### [trivia](./trivia)
