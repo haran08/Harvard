@@ -25,14 +25,14 @@ A stock portfolio web app built with Flask. Supports user registration, simulate
   <tr>
     <td>
       <details>
-        <summary><img src="./readme_assets/finance_login.png" width="200"></summary>
-        <img src="./readme_assets/finance_login.png" width="800">
+        <summary><img src="./readme_assets/finance_login.png" width="400"></summary>
+        <img src="./readme_assets/finance_login.png" width="1000">
       </details>
     </td>
     <td>
       <details>
-        <summary><img src="./readme_assets/finance_index.png" width="200"></summary>
-        <img src="./readme_assets/finance_index.png" width="800">
+        <summary><img src="./readme_assets/finance_index.png" width="400"></summary>
+        <img src="./readme_assets/finance_index.png" width="1000">
       </details>
     </td>
   </tr>
