@@ -32,7 +32,9 @@ A trivia quiz web app with dynamic front end, and score tracking.
 
 
 #### [birthdays](./birthdays)
-A Flask web app for managing birthday records. Covers form handling, database operations, and basic dynamic content — a solid intro to full-stack web development.
+A Flask web app for managing birthday records. Covers form handling, database operations, and basic dynamic content — a intro to full-stack web development.
+
+![Alt finacen_login](https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/birthday.png)
 
 #### [homepage](./homepage)
 A personal portfolio site using HTML, CSS, and JavaScript — responsive, styled, and interactive. - In progress
