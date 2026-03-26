@@ -28,7 +28,7 @@ A trivia quiz web app with dynamic front end, and score tracking.
 
 <table>
     <a href="https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/trivia1.png" target="_blank">
-        <td><img src="./readme_assets/trivia1.png" width="400"></td>
+        <td>{{![Alt ]}}</td>
     </a>
     <a href="https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/trivia2.png" target="_blank">
         <td><img src="./readme_assets/trivia2.png" width="400"></td>
