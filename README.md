@@ -19,11 +19,18 @@ A stock portfolio web app built with Flask. Supports user registration, simulate
 
 | Login | Index |
 | :---: | :---: |
-| [![Alt finacen_login](./readme_assets/finance_login.png)](./readme_assets/finance_login.png) | [![Alt finacen_index](./readme_assets/finance_index.png)](./readme_assets/finance_index.png) |
+| ![Alt finacen_login](https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/finance_login.png) | ![Alt finacen_index](https://raw.githubusercontent.com/haran08/Harvard/refs/heads/master/readme_assets/finance_index.png) |
 
 
 #### [trivia](./trivia)
 A trivia quiz web app with a Flask backend, dynamic front end, and score tracking.
+
+
+<table>
+    <td><img src="./readme_assets/trivia1.png" width="400"></td>
+    <td><img src="./readme_assets/trivia2.png" width="400"></td>
+</table>
+
 
 #### [birthdays](./birthdays)
 A Flask web app for managing birthday records. Covers form handling, database operations, and basic dynamic content — a solid intro to full-stack web development.
